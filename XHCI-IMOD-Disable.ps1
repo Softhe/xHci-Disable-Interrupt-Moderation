@@ -1,4 +1,4 @@
-<# Created by Softhe... bla bla HOW TO USE ect
+<# Created by Softhe... yadayadayada HOW TO USE ect
 #>
 
 # Start as administrator
@@ -329,9 +329,9 @@ $configUsed = Execute-IMOD-Process
 if ($configUsed) {
     Write-Host "Configuration file was used."
     Write-Host "Waiting for 1 second..."
-    [System.Threading.Thread]::Sleep(3000)  # Wait for 1000 milliseconds (1 second) before exiting
+    [System.Threading.Thread]::Sleep(3000)  # Wait for 3000 milliseconds (1 second) before exiting (debugging reasons not useful or needed)
     Write-Host "Exiting now."
 } else {
     Write-Host "Manual selection was used."
-    cmd /c pause  # Pause only if manual selection was used
+    cmd /c pause  # Pause only if manual selection was used for simplicity
 }
