@@ -1,0 +1,15 @@
+<# HOWTO:
+If this file is not in the same path as the script it will ask you to choose, if it exists in the same path it AND the device #ID is valid (matches any controller in your system) it will not require any inputs and will happen silently.
+
+To know what the #ID of the desired controller is either;
+1. Copy-paste it from the console window when running without this file (PCI\VEN_1022&DEV_..... for example)
+
+2. Open the device manager, then go to "Universal Serial Bus controllers" Find the controller you want to disable (the one connected to your mouse) and go to properties, go to details, and copy-paste the device instance path #2 in the drop-down and paste it below.
+
+If you want to find out what controller is connected to your mouse change the view to devices by connection, find your mouse under the controller in the tree, and follow step 2 to copy the #ID.
+Keep in mind if you change the port where the mouse is plugged in this controller might change depending on your motherboard layout etc.
+#>
+
+
+# AMD USB 2.0 eXtensible Host Controller (this is my controller and you want replace the following #ID with the thing you just copied FYI. But since you probly don't have the same motherboard as me it will simply ignore mine if you don't remove it.
+PCI\VEN_1022&DEV_15B8&SUBSYS_88771043&REV_00\4&89701DF&0&0043
