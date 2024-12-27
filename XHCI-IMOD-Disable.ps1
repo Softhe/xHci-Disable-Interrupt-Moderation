@@ -329,9 +329,9 @@ $configUsed = Execute-IMOD-Process
 if ($configUsed) {
     Write-Host "Configuration file was used."
     Write-Host "Waiting for 1 second..."
-    [System.Threading.Thread]::Sleep(3000)  # Wait for 3000 milliseconds (1 second) before exiting (debugging reasons not useful or needed)
+    [System.Threading.Thread]::Sleep(3000)  # REMOVE THIS SLEEP ON release! Wait for 3000 milliseconds before exiting (debugging reasons not useful or needed)
     Write-Host "Exiting now."
 } else {
     Write-Host "Manual selection was used."
-    cmd /c pause  # Pause only if manual selection was used for simplicity
+    cmd /c pause  # Pause only if manual selection was used for simplicity for users
 }
